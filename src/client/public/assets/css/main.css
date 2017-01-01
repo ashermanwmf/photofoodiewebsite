@@ -13,3 +13,7 @@ footer {
 .imgRow {
   margin-top: 1.5%;
 }
+
+.fa:hover {
+  color: #222222;
+}

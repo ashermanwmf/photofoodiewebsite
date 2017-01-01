@@ -50,7 +50,11 @@ class App extends Component {
         <Footer className="footer" copyrights="&copy; 2017 Copyright"
           links={
             <ul>
-              <li><a className="grey-text text-lighten-3" href="https://www.instagram.com/photogenicfoodies/">Instagram</a></li>
+              <li>
+                <a className="grey-text text-lighten-3" href="https://www.instagram.com/photogenicfoodies/">
+                  <i className="fa fa-4x fa-instagram" aria-hidden="true"></i> Instagram
+                </a>
+              </li>
             </ul>
           }
           className='example'
