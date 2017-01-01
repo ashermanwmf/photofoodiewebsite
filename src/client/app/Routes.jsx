@@ -5,6 +5,7 @@ import { createStore }                              from 'redux';
 import { Provider }                                 from 'react-redux';
 import { syncHistoryWithStore, routerReducer }      from 'react-router-redux';
 import App                                          from './components/App.jsx';
+import About                                        from './components/About.jsx';
 import rootReducer                                  from './reducers/rootreducer.js';
 
 const store = createStore(rootReducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
@@ -14,6 +15,7 @@ render((
   <Provider store={store}>
     <Router history={history}>
       <Route path='/' activeClassName="active" component={App}>
+        <Route path='about' component={About}/>
       </Route>
     </Router>
   </Provider>
