@@ -5,8 +5,8 @@ module.exports = {
   initialPhotos(req, res, next) {
     request.get(`https://api.instagram.com/v1/users/${CLIENT_ID}/media/recent/?access_token=${ACCESS_TOKEN}`)
       .then((data) =>{
-        console.log(data);
-        res.send(data);
+        console.log(data)
+        res.send(data.data);
       })
       .catch((err) =>{
         res.status(404).send(new Error("data not found at this time"));

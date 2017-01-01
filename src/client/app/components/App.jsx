@@ -6,9 +6,9 @@ class App extends Component {
     super();
   }
   componentWillMount() {
-    request.get('/api/photos')
+    request.get('http://localhost:3000/api/photos')
       .then((data) =>{
-        console.log("DATA", data);
+        console.log(data.data, data.data.data)
       })
       .catch((err) =>{
         console.log("ERROR", err);

@@ -18,9 +18,9 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true })); 
 app.use(express.static(root)); 
 
-app.use(fallback('index.html', {root}));
-
 routes(app);
+
+app.use(fallback('index.html', {root}));
 
 app.listen(app.get('port'), () =>{
   console.log(`listening on port: ${app.get('port')}`);
