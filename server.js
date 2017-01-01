@@ -2,6 +2,7 @@ const express           = require('express');
 const bodyParser        = require('body-parser');
 const fallback          = require('express-history-api-fallback');
 const webpackMiddleWare = require('./webpackMiddleWare/config.js');
+const routes            = require('./routes/route.js');
 const app               = express();
 
 const root = `${__dirname}/src/client/public`;
@@ -18,6 +19,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(root)); 
 
 app.use(fallback('index.html', {root}));
+
+routes(app);
 
 app.listen(app.get('port'), () =>{
   console.log(`listening on port: ${app.get('port')}`);
