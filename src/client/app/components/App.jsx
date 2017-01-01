@@ -1,7 +1,7 @@
-import React, { Component }                  from "react";
-import { Navbar, Footer, Button, Icon, Row } from "react-materialize";
-import Image                                 from "./Image.jsx";
-import request                               from "axios";
+import React, { Component }             from "react";
+import { Navbar, Footer, Button, Icon } from "react-materialize";
+import Image                            from "./Image.jsx";
+import request                          from "axios";
 
 class App extends Component {
   constructor() {
@@ -39,13 +39,15 @@ class App extends Component {
         <Navbar brand="@PHOTOGENICFOODIES" right>
         </Navbar>
           <h1>{error}</h1>
-          <Row className="imgRow">
-            {imageData.map((img, i) =>
-              <Image key={i} data={img} />
-            )}
-          </Row>
+          <div className="container-fluid">
+            <div className="row">
+              {imageData.map((img, i) =>
+                <Image key={i} data={img} />
+              )}
+            </div>
+          </div>
           <p>
-            <Button className="loadbtn" waves='light' onClick={this.fetchImages.bind(this)}>Load More<Icon left>cloud</Icon></Button>
+            <Button className="loadbtn" waves='light' onClick={this.fetchImages.bind(this)}>Load More</Button>
           </p>
         <Footer className="footer" copyrights="&copy; 2017 Copyright"
           links={

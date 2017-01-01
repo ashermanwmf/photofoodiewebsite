@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Col }              from "react-materialize";
+import { Col }              from "react-bootstrap";
 
 class Image extends Component {
   constructor(props) {
@@ -8,7 +8,7 @@ class Image extends Component {
   render() {
     return(
       <div>
-        <Col s={3} className='grid-example'><img src={this.props.data.images.low_resolution.url} /></Col>  
+        <Col xs={1} md={3} className='grid-example'><img src={this.props.data.images.low_resolution.url} /></Col>  
       </div>
     ); 
   }
