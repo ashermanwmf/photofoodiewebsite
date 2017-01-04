@@ -14,6 +14,7 @@ class App extends Component {
   componentWillMount() {
     request.get('http://localhost:3000/api/photos')
       .then((data) =>{
+        console.log(data.data)
         this.setState({imageData: data.data.data});
       })
       .catch((err) =>{

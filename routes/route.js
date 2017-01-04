@@ -1,4 +1,4 @@
-const { initialPhotos, getMorePhotos } = require('../routeHelpers/routeHelper.js');
+const { initialPhotos, getMorePhotos, accountInfo } = require('../routeHelpers/routeHelper.js');
 
 module.exports = (app) =>{
 
@@ -12,5 +12,7 @@ module.exports = (app) =>{
   
   app.get('/api/photos', initialPhotos);
 
-  app.get('/morePhotos/:paginationId', getMorePhotos);
+  app.get('/api/accountInfo', accountInfo);
+
+  app.get('/api/morePhotos/:paginationId', getMorePhotos);
 };
