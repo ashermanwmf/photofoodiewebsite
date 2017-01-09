@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { Col }              from "react-bootstrap";
 
 class Image extends Component {
   constructor(props) {
@@ -7,8 +6,8 @@ class Image extends Component {
   }
   render() {
     return(
-      <div>
-        <Col xs={1} md={3} className='grid-example'><img src={this.props.data.images.low_resolution.url} /></Col>  
+      <div className="col-md-3 photostream-column">
+        <img className="photostream-photo" src={this.props.data.images.standard_resolution.url} />
       </div>
     ); 
   }

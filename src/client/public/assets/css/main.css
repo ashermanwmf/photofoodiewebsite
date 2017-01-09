@@ -17,3 +17,11 @@ footer {
 .fa:hover {
   color: #222222;
 }
+
+.photostream-column {
+  margin-bottom: 2%;
+}
+
+.photostream-photo {
+  width: 100%;
+}
