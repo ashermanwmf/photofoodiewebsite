@@ -2,6 +2,15 @@ nav{
   background-color: #3B7FED !important;
 }
 
+h2 {
+  margin-top: 0%;
+  padding-top: 1%;
+}
+
+.main-content {
+  margin-top: 3%;
+}
+
 footer {
   background-color: #3B7FED !important; 
 }
