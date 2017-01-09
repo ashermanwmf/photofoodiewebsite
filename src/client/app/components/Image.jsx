@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Modal }              from "react-materialize";
 
 class Image extends Component {
   constructor(props) {
@@ -9,14 +10,35 @@ class Image extends Component {
     console.log(imageData);
   }
   render() {
+    let columnClass = window.innerWidth < 750 ? "col s12 photostream-column" : "col s3 photostream-column";
+    let header = this.props.data.caption === null ? "Location information" : this.props.data.caption.text;
+
     return(
-      <div className="col-md-3 photostream-column">
-        <img 
-          className="photostream-photo" 
-          src={this.props.data.images.standard_resolution.url}
-          onClick={() => this.openModal(this.props.data)} 
-        />
-      </div>
+      <Modal
+        header={header}
+        fixedFooter
+        trigger={
+          <div className={columnClass}>
+            <img 
+              className="photostream-photo" 
+              src={this.props.data.images.standard_resolution.url}
+              onClick={() => this.openModal(this.props.data)} 
+            />
+          </div>
+        }>
+        <div className="row">
+          <div className="col s5">
+            <img 
+                className="photostream-photo" 
+                src={this.props.data.images.low_resolution.url}
+                onClick={() => this.openModal(this.props.data)} 
+            />
+          </div>
+          <div className="col s5">
+            map and other infomation
+          </div>
+        </div>
+      </Modal>
     ); 
   }
 }

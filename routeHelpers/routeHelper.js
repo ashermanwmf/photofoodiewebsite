@@ -5,7 +5,7 @@ module.exports = {
   initialPhotos(req, res, next) {
     request.get(`https://api.instagram.com/v1/users/${CLIENT_ID}/media/recent/?access_token=${ACCESS_TOKEN}`)
       .then((data) =>{
-        console.log('number of query calls left: ', data.headers['x-ratelimit-remaining']);
+        console.log('query calls left: ', data.headers['x-ratelimit-remaining']);
         res.send(data.data);
       })
       .catch((err) =>{

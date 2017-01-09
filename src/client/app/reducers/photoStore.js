@@ -1,12 +1,13 @@
 export default (state = [], action) =>{
   switch(action.type){
     case "INITIAL_PHOTO_CALL":
-      // add the initial photos to the state array
       const newState = state.concat(action.payload);
 
-      console.log(newState, 'reducer, newState');
+      return newState;
+    case "ADDITIONAL_PHOTO_CALL":
+      const updatedState = state.concat(action.payload);
 
-      return action.payload;
+      return updatedState;
     default:
       return state;
   }

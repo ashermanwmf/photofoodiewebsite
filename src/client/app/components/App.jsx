@@ -43,21 +43,20 @@ class App extends Component {
     return(
       <div>
         <nav>
-          <h2>@PHOTOGENICFOODIES</h2>
+          <h4>@PHOTOGENICFOODIES</h4>
         </nav>
         <section className="main-content">
           <h1>{message}</h1>
-          <div className="container-fluid">
             <div className="row">
               {images.map((img, i) =>
                 <Image key={i} data={img} />
               )}
             </div>
-          </div>
           <center>
             <Button className="loadbtn" waves='light' onClick={this.fetchImages.bind(this)}>Load More</Button>
           </center>
         </section>
+
         <Footer className="footer" copyrights="&copy; 2017 Copyright"
           links={
             <ul>
@@ -69,12 +68,12 @@ class App extends Component {
             </ul>
           }
           className='example'
-          >
-            <h3 className="white-text">@photogenicfoodies</h3>
-            <h4 className="grey-text text-lighten-4">
+        >
+            <h5 className="white-text">@photogenicfoodies</h5>
+            <h6 className="grey-text text-lighten-4">
               Photogenic Foodies SF Taste testing San Francisco one 
               mouthful at a time 📸🍴 * San Francisco's Best Eats & Sweets *
-            </h4>
+            </h6>
         </Footer>
       </div>
     ); 
