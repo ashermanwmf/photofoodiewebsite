@@ -47,3 +47,9 @@ img {
 .loadbtn {
   background-color: #3B7FED !important; 
 }
+
+.bigmap {
+  width: '65%'; 
+  height: '30%'; 
+  position: 'relative';
+}

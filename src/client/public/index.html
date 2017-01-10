@@ -4,13 +4,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBLlSC1WKmfYgRRd7M6SIAoLmCy3nm_OSM&libraries=places"></script>
+
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <!-- <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="assets/css/main.css">
-    <!-- <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
   </head>
 
   <body>
@@ -19,14 +19,20 @@
     <script type="text/javascript" src="./bundle.js"></script>
     <script>
       $(document).ready(function() {
-        
+        // update the size of images on window size change
         $(window).resize(function() {
           if(window.innerWidth < 750){
             $(".photostream-column").removeClass('s3');
             $(".photostream-column").addClass('s12');
+
+            $(".photo-modal").removeClass('s5');
+            $(".photo-modal").addClass('s12');
           }else {
             $(".photostream-column").removeClass('s12');
             $(".photostream-column").addClass('s3');
+
+            $(".photo-modal").removeClass('s12');
+            $(".photo-modal").addClass('s5');
           }
         });
 

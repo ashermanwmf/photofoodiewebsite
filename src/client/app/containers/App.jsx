@@ -2,9 +2,10 @@ import React, { Component }             from "react";
 import { Navbar, Footer, Button, Icon } from "react-materialize";
 import { connect }                      from 'react-redux';
 import { bindActionCreators }           from 'redux';
-import Image                            from "./Image.jsx";
+import Image                            from "../components/Image.jsx";
 import request                          from "axios";
 import initialPhotosAction              from "../actions/initial-photos";
+import { API_KEY }                      from "../../../../gmapsConfig/config";
 
 class App extends Component {
   constructor() {
@@ -45,6 +46,7 @@ class App extends Component {
         <nav>
           <h4>@PHOTOGENICFOODIES</h4>
         </nav>
+
         <section className="main-content">
           <h1>{message}</h1>
             <div className="row">
@@ -67,13 +69,12 @@ class App extends Component {
               </li>
             </ul>
           }
-          className='example'
         >
-            <h5 className="white-text">@photogenicfoodies</h5>
-            <h6 className="grey-text text-lighten-4">
-              Photogenic Foodies SF Taste testing San Francisco one 
-              mouthful at a time 📸🍴 * San Francisco's Best Eats & Sweets *
-            </h6>
+          <h5 className="white-text">@photogenicfoodies</h5>
+          <h6 className="grey-text text-lighten-4">
+            Photogenic Foodies SF Taste testing San Francisco one 
+            mouthful at a time 📸🍴 * San Francisco's Best Eats & Sweets *
+          </h6>
         </Footer>
       </div>
     ); 

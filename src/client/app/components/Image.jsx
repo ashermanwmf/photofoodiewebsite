@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Modal }              from "react-materialize";
+import { Modal }            from "react-materialize";
 
 class Image extends Component {
   constructor(props) {
@@ -11,6 +11,7 @@ class Image extends Component {
   }
   render() {
     let columnClass = window.innerWidth < 750 ? "col s12 photostream-column" : "col s3 photostream-column";
+    let modalColumnClass = window.innerWidth < 750 ? "col s12 photo-modal" : "col s6 photo-modal";
     let header = this.props.data.caption === null ? "Location information" : this.props.data.caption.text;
 
     return(
@@ -26,16 +27,15 @@ class Image extends Component {
             />
           </div>
         }>
-        <div className="row">
-          <div className="col s5">
+        <div className="row modal-container">
+          <div className={modalColumnClass}>
             <img 
                 className="photostream-photo" 
                 src={this.props.data.images.low_resolution.url}
                 onClick={() => this.openModal(this.props.data)} 
             />
           </div>
-          <div className="col s5">
-            map and other infomation
+          <div className={modalColumnClass}>
           </div>
         </div>
       </Modal>
