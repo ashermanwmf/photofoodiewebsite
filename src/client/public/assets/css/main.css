@@ -26,12 +26,6 @@ footer {
   background-color: #3B7FED !important; 
 }
 
-img {
-  -webkit-box-shadow: 0px 5px 39px -9px rgba(0,0,0,0.75);
-  -moz-box-shadow: 0px 5px 39px -9px rgba(0,0,0,0.75);
-  box-shadow: 0px 5px 39px -9px rgba(0,0,0,0.75);
-}
-
 .fa:hover {
   color: #222222;
 }
@@ -42,6 +36,9 @@ img {
 
 .photostream-photo {
   width: 100%;
+  -webkit-box-shadow: 0px 5px 39px -9px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 5px 39px -9px rgba(0,0,0,0.75);
+  box-shadow: 0px 5px 39px -9px rgba(0,0,0,0.75);
 }
 
 .loadbtn {

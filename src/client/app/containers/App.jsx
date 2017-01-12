@@ -49,11 +49,13 @@ class App extends Component {
 
         <section className="main-content">
           <h1>{message}</h1>
-            <div className="row">
-              {images.map((img, i) =>
-                <Image key={i} data={img} />
-              )}
-            </div>
+          
+          <div className="row">
+            {images.map((img, i) =>
+              <Image key={i} data={img} />
+            )}
+          </div>
+
           <center>
             <Button className="loadbtn" waves='light' onClick={this.fetchImages.bind(this)}>Load More</Button>
           </center>
